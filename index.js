@@ -37,12 +37,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.set('view engine', 'ejs');
 
-app.get('/register', (req,res)=>{
+app.get('/', (req,res)=>{
  res.render('demo.ejs')
 })
 
 //  registration
-app.post('/register', async (req, res) => {
+app.post('/', async (req, res) => {
  try {
     const { email, username, password } = req.body;
 
